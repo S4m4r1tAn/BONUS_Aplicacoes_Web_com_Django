@@ -19,4 +19,7 @@ def novo_investimento(request):
     return render(request, 'investimentos/novo_investimento.html')
 
 def investimento_registrado(request):
-    return render(request, 'investimentos/investimento_registrado.html')
+    investimento = {
+        'tipo_investimento': request.POST.get('TipoInvestimento')
+    }
+    return render(request, 'investimentos/investimento_registrado.html', investimento)
