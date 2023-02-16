@@ -14,3 +14,9 @@ def minha_historia(request):
         'hobby': 'Games',
     }
     return render(request, 'investimentos/minha_historia.html', pessoa)
+
+def novo_investimento(request):
+    return render(request, 'investimentos/novo_investimento.html')
+
+def investimento_registrado(request):
+    return render(request, 'investimentos/investimento_registrado.html')
