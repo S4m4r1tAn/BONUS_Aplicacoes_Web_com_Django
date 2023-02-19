@@ -12,4 +12,4 @@ class Investimento(models.Model):
     valor = models.FloatField()
     pago = models.BooleanField(default=False)
     data = models.DateField(default=datetime.now())
-        
+            
