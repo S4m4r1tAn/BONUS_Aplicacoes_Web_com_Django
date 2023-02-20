@@ -6,11 +6,11 @@
         <th>Valor</th>
     </tr>
     {% for dado in dados %}
-    <th>
+    <tr>
         <td>{{dado.id}}</td>
-        <td>{{dado.investimentos}}</td>
+        <td>{{dado.investimento}}</td>
         <td>{{dado.valor}}</td>
+        <td><button><a href="{% url 'detalhe' dado.id %}"></a></button></td>
     <tr>
     {% endfor %}
-    </th>
 </table>
