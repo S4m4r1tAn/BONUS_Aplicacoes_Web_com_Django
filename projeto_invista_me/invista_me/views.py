@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
+from .models import Investimento
 
 def pagina_inicial(request):
     return HttpResponse('Pronto para investir!')
@@ -23,3 +24,9 @@ def investimento_registrado(request):
         'tipo_investimento': request.POST.get('TipoInvestimento')
     }
     return render(request, 'investimentos/investimento_registrado.html', investimento)
+
+def investimentos(request):
+    dados = {
+        'dados': Investimento.objects.all()
+    }
+    return render(request, 'investimentos/investimentos.html', context=dados)
