@@ -18,8 +18,10 @@ from django.urls import path
 from invista_me import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", views.investimentos),
-    path("novo_investimento/", views.criar, name='novo_investimento'),
-    path('/<int:id_investimento>', views.detalhe, name='detalhe'),
+    path('admin/', admin.site.urls),
+    path('', views.investimentos),
+    path('novo_investimento/', 
+         views.criar, name='novo_investimento'),
+    path('/<int:id_investimento>', views.detalhe, name='detalhe')
+    
 ]
