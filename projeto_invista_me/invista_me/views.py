@@ -3,7 +3,8 @@ from django.shortcuts import HttpResponse
 from .models import Investimento
 from .forms import InvestimentoForm
 
-""" def pagina_inicial(request):
+""" 
+def pagina_inicial(request):
     return HttpResponse('Pronto para investir!')
 
 def contato(request):
@@ -11,9 +12,9 @@ def contato(request):
 
 def minha_historia(request):
     pessoa = {
-        'nome': 'Jeff',
-        'idade': '28',
-        'hobby': 'Games',
+        'nome': 'Emerson',
+        'idade': '42',
+        'hobby': 'Mining',
     }
     return render(request, 'investimentos/minha_historia.html', pessoa)
 
@@ -24,7 +25,8 @@ def investimento_registrado(request):
     investimento = {
         'tipo_investimento': request.POST.get('TipoInvestimento')
     }
-    return render(request, 'investimentos/investimento_registrado.html', investimento) """
+    return render(request, 'investimentos/investimento_registrado.html', investimento) 
+"""
 
 def investimentos(request):
     dados = {
@@ -39,8 +41,8 @@ def detalhe(request, id_investimento):
     return render(request, 'investimentos/detalhe.html', dados)
 
 def criar(request):
-    investinento_form = InvestimentoForm()
+    investimento_form = InvestimentoForm()
     formulario = {
-        'formulario': investinento_form
+        'formulario': investimento_form
     }
     return render(request, 'investimentos/novo_investimento.html', context=formulario)
