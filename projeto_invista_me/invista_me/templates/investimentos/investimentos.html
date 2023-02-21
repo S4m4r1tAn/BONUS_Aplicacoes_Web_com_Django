@@ -1,4 +1,5 @@
 <h1>Listagem de Investimentos</h1>
+<button><a href="{ url 'novo_investimento'}">Novo Investimento</a></button>
 <table>
     <tr>
         <th>Id</th>
@@ -10,7 +11,7 @@
         <td>{{dado.id}}</td>
         <td>{{dado.investimento}}</td>
         <td>{{dado.valor}}</td>
-        <td><button><a href="{% url 'detalhe' dado.id %}"></a></button></td>
+        <td><button><a href="{% url 'detalhe' dado.id %}">Detalhe</a></button></td>
     <tr>
     {% endfor %}
 </table>
