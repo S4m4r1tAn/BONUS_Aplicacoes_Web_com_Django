@@ -1,0 +1,6 @@
+<form method="POST">
+    {% csrf_token %}%%
+    <h1> Confirmar exclusao do {{item.investimento}}</h1>
+    <button><a href="{% url 'investimentos' %}">Cancelar</a></button>
+    <button><a type="submit">Confirmar</button>
+</form>
