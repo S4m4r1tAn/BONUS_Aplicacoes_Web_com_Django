@@ -14,12 +14,19 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'investimentos' %}">Invista-Me!</a>
         <ul style="list-style: none;">
+            {% if user.is_authenticated %}
             <li   style="float: left">
-              <a class="nav-item nav-link" href="#">Login</a>
-            </li>
+              <strong class="nav-item nav-link">Bem vindo {{user.get_username}}</strong>
             <li   style="float: left">
-              <a class="nav-item nav-link" href="#">Fazer Cadastro</a>
+              <a class="nav-item nav-link" href="{% url 'logout' %}">Sair</a>
             </li>
+            {% else %}
+            <li   style="float: left">
+              <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+            <li   style="float: left">
+              <a class="nav-item nav-link" href="{% url 'novo_usuario' %}">Fazer Cadastro</a>
+            </li>
+            {% endif %}
         </ul>
     </nav>
     {% if messages %}

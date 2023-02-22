@@ -2,11 +2,12 @@
 {% load crispy_forms_tags %}
 {% block conteudo %}
 <div class="container">
+    <h1>Cadastrar Novo Usuario</h1>
     <form method="POST">
         {% csrf_token %}
         {{ formulario | crispy }}
         <button class="btn btn-primary"><a type="submit">Criar Novo Usuario</button>
-        <a href="#"> ->Ja possui uma conta? Entre aqui</a>
+        <a href="{% url 'login' %}"> ->Ja possui uma conta? Entre aqui</a>
     </form>
 </div>                                          
 {% endblock %}
