@@ -48,9 +48,9 @@ def criar(request):
     else:
         investimento_form = InvestimentoForm()
         formulario = {
-            "formulario": investimento_form
+            'formulario': investimento_form
         }
-        return render(request, "investimentos/novo_investimento.html", context=formulario)
+        return render(request, 'investimentos/novo_investimento.html', context=formulario)
 
 def editar(request, id_investimento):
     investimento = Investimento.objects.get(pk=id_investimento)

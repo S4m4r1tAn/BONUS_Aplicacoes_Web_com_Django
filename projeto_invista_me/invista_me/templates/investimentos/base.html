@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,7 +13,20 @@
   <body>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'investimentos' %}">Invista-Me!</a>
+        <ul style="list-style: none;">
+            <li   style="float: left">
+              <a class="nav-item nav-link" href="#">Login</a>
+            </li>
+            <li   style="float: left">
+              <a class="nav-item nav-link" href="#">Fazer Cadastro</a>
+            </li>
+        </ul>
     </nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{message}}</div>
+    {% endfor %}
+    {% endif %}
     {% block conteudo %}
     
     {% endblock %}
