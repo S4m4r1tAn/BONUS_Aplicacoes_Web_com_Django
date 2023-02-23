@@ -9,7 +9,7 @@ def novo_usuario(request):
             formulario.save()
             usuario = formulario.cleaned_data.get('username')
             messages.success(request, f'O usuario {usuario} foi criado com sucesso!')
-            return redirect('investimentos')
+            return redirect('login')
     else:
         formulario = UserRegisterForm()
                     
