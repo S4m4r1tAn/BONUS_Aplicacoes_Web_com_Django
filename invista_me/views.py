@@ -3,6 +3,7 @@ from .models import Investimento
 from .forms import InvestimentoForm
 from django.contrib.auth.decorators import login_required
 
+
 """ 
 def pagina_inicial(request):
     return HttpResponse('Pronto para investir!')
@@ -75,4 +76,5 @@ def excluir(request, id_investimento):
         investimento.delete()
         return redirect('investimentos')
     return render(request, 'investimentos/confirmar_exclusao.html', {'item': investimento})
+
     
