@@ -1,5 +1,9 @@
 {% extends 'investimentos/base.html' %}
 {% block conteudo %}
+{% load money %}
+...
+<h1>{{ investimento.nome }}</h1>
+<p>Preço: {% money investimento.valor %}</p>
 
 <h1 style='text-align: center;'>Listagem de Investimentos</h1>
 <div class="container">
