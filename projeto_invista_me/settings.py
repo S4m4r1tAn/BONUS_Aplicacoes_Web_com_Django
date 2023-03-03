@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +26,7 @@ SECRET_KEY = "django-insecure-orwpgm7h!yrd$=+@9us&oi*%5iln3(^g39rk-p-ldbwp-#76qe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,7 +40,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "invista_me",
     "crispy_forms",
-    "crispy_bootstrap4",
     "crispy_bootstrap5",
     "usuarios",
     "django.contrib.humanize",
@@ -83,14 +81,10 @@ WSGI_APPLICATION = "projeto_invista_me.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "railway",
-        "USER": "postgres",
-        "PASSWORD": "G26pjovNedVYTTGsDd46",
-        "HOST": "containers-us-west-200.railway.app",
-        "PORT": "6210",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
-}   
+}
 
 
 # Password validation
@@ -132,9 +126,7 @@ STATIC_URL = "static/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-# DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 LOGIN_REDIRECT_URL = 'investimentos'
 LOGIN_URL = 'login'
