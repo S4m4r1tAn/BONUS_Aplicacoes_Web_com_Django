@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "invista_me",
     "crispy_forms",
+    "crispy_bootstrap4",
     "crispy_bootstrap5",
     "usuarios",
     "django.contrib.humanize",
