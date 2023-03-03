@@ -18,7 +18,7 @@
         <tr>
             <td style='text-align: center;'>{{dado.id}}</td>
             <td style='text-align: center;'>{{dado.investimento}}</td>
-            <td style='text-align: center;'>R$ {{dado.valor|floatformat:2|intcomma}}</td>
+            <td style='text-align: center;'>R$ {{dado.valor|floatformat:2|intcomma }}</td>
             <td style='text-align: center;'><button class='btn btn-info'><a style='color: white;' href="{% url 'detalhe' dado.id %}">Detalhe</a></button></td>
             <td style='text-align: center;'><button class='btn btn-warning'><a style='color: white;'href="{% url 'editar' dado.id %}">Editar</a></button></td>
             <td style='text-align: center;'><button class='btn btn-danger'><a style='color: white;'href="{% url 'excluir' dado.id %}">Excluir</a></button></td>
