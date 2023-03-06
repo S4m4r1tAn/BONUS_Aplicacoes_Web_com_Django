@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
+import whitenoise
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +29,7 @@ SECRET_KEY = "django-insecure-orwpgm7h!yrd$=+@9us&oi*%5iln3(^g39rk-p-ldbwp-#76qe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["bonusaplicacoeswebcomdjango-production-7b09.up.railway.app"]
 
 
 # Application definition
@@ -91,7 +93,8 @@ DATABASES = {
     }
 }
 
-
+prod_db = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -120,6 +123,8 @@ TIME_ZONE = "America/Sao_Paulo"
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 USE_THOUSAND_SEPARATOR = True
@@ -132,13 +137,10 @@ DECIMAL_SEPARATOR = ','
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "/static/"
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 LOGIN_REDIRECT_URL = 'investimentos'
 LOGIN_URL = 'login'
