@@ -5,4 +5,3 @@ class InvestimentoForm(ModelForm):
     class Meta:
         model = Investimento
         fields = '__all__'
-        

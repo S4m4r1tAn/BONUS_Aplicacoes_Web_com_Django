@@ -1,1 +1,1 @@
-web: gunicorn projeto_invista_me.wsgi
+web: gunicorn projeto_investa_me.wsgi

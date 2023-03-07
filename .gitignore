@@ -1,5 +1,5 @@
-.emerson/
-emerson/
+.jhonatan/
+jhonatan/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -129,3 +129,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+heroku/
