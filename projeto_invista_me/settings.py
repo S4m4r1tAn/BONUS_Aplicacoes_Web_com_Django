@@ -31,10 +31,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["bonusaplicacoeswebcomdjango-production-7b09.up.railway.app"]
 
-CSRF_TRUSTED_ORIGINS = [
-'https://bonusaplicacoeswebcomdjango-production-7b09.up.railway.app/'
-]
-
 
 # Application definition
 
