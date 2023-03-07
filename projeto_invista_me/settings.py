@@ -29,8 +29,6 @@ SECRET_KEY = "django-insecure-orwpgm7h!yrd$=+@9us&oi*%5iln3(^g39rk-p-ldbwp-#76qe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 CSRF_TRUSTED_ORIGINS = ["https://bonusaplicacoeswebcomdjango-production-7b09.up.railway.app/"]
-CORS_ORIGIN_WHITELIST = ["bonusaplicacoeswebcomdjango-production-7b09.up.railway.app",]
-CORS_ORIGIN_ALLOW_ALL = True
 
 ALLOWED_HOSTS = ["bonusaplicacoeswebcomdjango-production-7b09.up.railway.app",]
 
