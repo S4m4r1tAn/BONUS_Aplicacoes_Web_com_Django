@@ -28,7 +28,7 @@ SECRET_KEY = 'v#xjpat=*nkh^umn$rxb%qly55nfy)75*4r!i75%(zcqyl*kgk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://bonusaplicacoeswebcomdjango-production-3b17.up.railway.app/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
