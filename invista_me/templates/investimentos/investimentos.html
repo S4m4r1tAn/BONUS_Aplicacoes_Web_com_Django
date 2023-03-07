@@ -1,6 +1,5 @@
 {% extends 'investimentos/base.html' %}
 {% block conteudo %}
-{% load humanize %}
 
 <h1 style='text-align: center;'>Listagem de Investimentos</h1>
 <div class='container'>
@@ -20,7 +19,7 @@
         <tr>
             <td>{{dado.id}}</td>
             <td>{{dado.investimento}}</td>
-            <td>R$ {{dado.valor|floatformat:2|intcomma }}</td>
+            <td>{{dado.valor}}</td>
             <td><button class='btn btn-info'><a style='color:white;'
                         href="{% url 'detalhe' dado.id %}">Detalhe</a></button>
             </td>
