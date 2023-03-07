@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'v#xjpat=*nkh^umn$rxb%qly55nfy)75*4r!i75%(zcqyl*kgk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://bonusaplicacoeswebcomdjango-production-3b17.up.railway.app/']
 
