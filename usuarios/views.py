@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterForm
+from django.views.decorators.csrf import csrf_protect
 
+@csrf_protect
 def novo_usuario(request):
     if request.method == 'POST':
         formulario = UserRegisterForm(request.POST)
