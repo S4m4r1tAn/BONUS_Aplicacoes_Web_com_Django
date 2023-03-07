@@ -4,7 +4,7 @@
 <div class="container" style="padding:30px">
     <h1>Login</h1>
     <form method="POST">
-        {% csrf_token %}
+        
         {{ form | crispy }}
         <button class="btn btn-primary"><a type="submit">Fazer Login</button>
         <a href="{% url 'novo_usuario' %}"> ->Nao possui uma conta? Crie uma conta</a>
