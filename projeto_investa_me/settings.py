@@ -28,7 +28,7 @@ SECRET_KEY = 'v#xjpat=*nkh^umn$rxb%qly55nfy)75*4r!i75%(zcqyl*kgk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://bonusaplicacoeswebcomdjango-production-e86b.up.railway.app/']
 
 
 # Application definition
@@ -86,9 +86,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'railway', 
         'USER': 'postgres', 
-        'PASSWORD': 'NPQTyPyq6pj1vRXMlAUS',
-        'HOST': 'containers-us-west-139.railway.app', 
-        'PORT': '6397',
+        'PASSWORD': '2vemewRqPUgO6H6YZPCp',
+        'HOST': 'containers-us-west-185.railway.app', 
+        'PORT': '7435',
     }
 }
 
