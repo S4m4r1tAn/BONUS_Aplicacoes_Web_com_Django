@@ -7,7 +7,6 @@
         {% csrf_token %}
         {{ formulario | crispy }}
         <button class="btn btn-primary"><a type="submit">Criar Novo Usuario</button>
-        {% csrf_token %}
         <a href="{% url 'login' %}"> ->Ja possui uma conta? Entre aqui</a>
     </form>
 </div>                                          
