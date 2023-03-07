@@ -16,11 +16,4 @@ class Migration(migrations.Migration):
             name="nivel",
             field=models.IntegerField(default=1),
         ),
-        migrations.AlterField(
-            model_name="investimento",
-            name="data",
-            field=models.DateField(
-                default=datetime.datetime(2023, 2, 19, 11, 0, 11, 840443)
-            ),
-        ),
     ]

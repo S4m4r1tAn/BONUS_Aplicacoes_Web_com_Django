@@ -8,30 +8,18 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = []
+    dependencies = [
+    ]
 
     operations = [
         migrations.CreateModel(
             name="Investimento",
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
                 ("investimento", models.TextField(max_length=255)),
                 ("valor", models.FloatField()),
                 ("pago", models.BooleanField(default=False)),
-                (
-                    "data",
-                    models.DateField(
-                        default=datetime.datetime(2023, 2, 19, 10, 48, 10, 718899)
-                    ),
-                ),
+                ("data", models.DateField(default=datetime.datetime.now)),
             ],
         ),
     ]
